@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://unpkg.com/i18next@25.3.6/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@3.0.2/i18nextHttpBackend.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <nav class="d-md-flex justify-content-between py-5">
+      <div class="d-flex justify-content-between">
+        <div>
+          <img src="../images/logo.svg" alt="Logo">
+        </div>
+        <div class="d-md-none">
+          <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../images/logo_language.png" alt="Vyber jazyk" />
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" data-lang="cs" href="#">CS</a></li>
+            <li><a class="dropdown-item" data-lang="en" href="#">EN</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="d-flex justify-content-between gap-3 gap-md-5 list-unstyled mt-4 mt-md-0">
+        <li><a class="nav-link" data-i18n="products" aria-current="page" href="#products"></a></li>
+        <li><a class="nav-link" data-i18n="materials" aria-current="page" href="#hero"></a></li>
+        <li><a class="nav-link" data-i18n="about_us" aria-current="page" href="#products"></a></li>
+        <li><a class="nav-link" data-i18n="contacts" aria-current="page" href="#footer"></a></li>
+      </ul>
+      <div class="d-none d-md-block">
+        <button type="button" class="btn " data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="../images/logo_language.png" alt="Select language" />
+        </button>
+        <ul class="dropdown-menu" style="width: 80px; height: auto">
+          <li><a class="dropdown-item" data-lang="cs" href="#">CS</a></li>
+          <li><a class="dropdown-item" data-lang="en" href="#">EN</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="main">
+  <section id="hero">
+    <div class="container">
+      <div class="row mt-5 g-5">
+        <div class="col-md-5 ">
+          <h1 style="font-size: 60px" data-i18n="heroes_heading"></h1>
+          <p class="mb-5" data-i18n="heroes_paragraph"></p>
+          <div>
+            <button type="button" class="btn btn-outline-primary btn-lg" data-i18n="catalog"></button>
+          </div>
+        </div>
+        <div class="col-md-7 d-flex justify-content-end">
+          <img class="img-fluid" src="../images/hero_img.png" alt="Things from paper" />
+        </div>
+      </div>
+     </div>
+  </section>
+  <section id="result">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mt-5">
+          <div class="d-flex">
+            <p><img class="img-fluid" src="../images/result_item1.png" /></p>
+            <p class="mt-3 ms-3 text-center" data-i18n="result_item_1"></p>
+          </div>
+        </div>
+        <div class="col-md-4 mt-5">
+          <div class="d-flex">
+            <p><img class="img-fluid" src="../images/result_item2.png" /></p>
+            <p class="mt-3 ms-2 text-center" data-i18n="result_item_2"></p>
+          </div>
+        </div>
+        <div class="col-md-4 mt-5">
+          <div class="d-flex">
+            <p><img class="img-fluid" src="../images/result_item3.png" /></p>
+            <p class="mt-3 ms-3 text-center" data-i18n="result_item_3"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5 g-3">
+        <div class="col-md-8"><img class="img-fluid" src="../images/result_img.png" /></div>
+        <div class="col-md-4">
+          <div class="result_content">
+            <h1 class="mb-3" style="color: #666666; font-weight: 400" data-i18n="maximum whiteness"></h1>
+            <p data-i18n="result_paragraph_1"></p>
+            <p data-i18n="result_paragraph_2"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="products">
+    <div class="container">
+      <ul class="row p-1">
+        <li class="col-md-3 py-4 px-md-3">
+          <div class="d-flex flex-column" style="height: 100%">
+            <div><img class="img-fluid mb-4" src="../images/product_1.png" alt="Packaging" /></div>
+            <h1 style="font-size: 30px" data-i18n="packaging"></h1>
+            <p style="font-size: 14px" data-i18n="print_run_1"></p>
+            <p data-i18n="products_1_paragraph"></p>
+            <div>
+              <a href="#" data-i18n="read_more"></a>
+              <img class="ms-1" src="../images/product_item_link.svg" alt="Read more"/>
+            </div>
+          </div>
+        </li>
+        <li class="col-md-3 py-4 px-md-3">
+          <div class="d-flex flex-column">
+            <div><img class="img-fluid mb-4" src="../images/product_2.png" alt="Bags" /></div>
+            <h1 style="font-size: 30px" data-i18n="bags"></h1>
+            <p style="font-size: 14px" data-i18n="print_run_2"></p>
+            <p data-i18n="products_2_paragraph"></p>
+            <div>
+              <a href="#" data-i18n="read_more"></a>
+              <img class="ms-1" src="../images/product_item_link.svg" alt="Read more"/>
+            </div>
+          </div>
+        </li>
+        <li class="col-md-3 py-4 px-md-3">
+          <div class="d-flex flex-column">
+            <div><img class="img-fluid mb-4" src="../images/product_3.png" alt="Cases"/></div>
+            <h1 style="font-size: 30px" data-i18n="cases"></h1>
+            <p style="font-size: 14px" data-i18n="print_run_3"></p>
+            <p data-i18n="products_3_paragraph"></p>
+            <div>
+              <a href="#" data-i18n="read_more"></a>
+              <img class="ms-1" src="../images/product_item_link.svg" alt="Read more"/>
+            </div>
+          </div>
+        </li>
+        <li class="col-md-3 pt-4 px-md-3">
+          <div class="d-flex flex-column">
+            <div><img class="img-fluid mb-4" src="../images/product_4.png" alt="Other products"/></div>
+            <h1 style="font-size: 30px" data-i18n="other_products"></h1>
+            <p style="font-size: 14px" data-i18n="print_run_4"></p>
+            <p data-i18n="other_products_paragraph"></p>
+            <div>
+              <a href="#" data-i18n="read_more"></a>
+              <img class="ms-1"  src="../images/product_item_link.svg" alt="Read more"/>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="partners">
+    <div class="container">
+      <div class="row row-cols-2 g-2">
+        <div class="col-md-3"><img class="img-fluid" src="../images/section4_1.png" alt="Partner" /></div>
+        <div class="col-md-3"><img class="img-fluid" src="../images/section4_2.png" alt="Partner" /></div>
+        <div class="col-md-3"><img class="img-fluid" src="../images/section4_3.png" alt="Partner" /></div>
+        <div class="col-md-3"><img class="img-fluid" src="../images/section4_4.png" alt="Partner" /></div>
+      </div>
+    </div>
+  </section>
+  <section class="sketchbook">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-4">
+            <div class="sketchbook-content">
+              <h1 data-i18n="sketchbook"></h1>
+              <p data-i18n="sketchbook_paragraph"></p>
+              <button type="button" class="btn btn-outline-primary btn-lg" data-i18n="buy"></button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img class="img-fluid" src="../images/sketch_img.png" />
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <footer>
+    <div id="footer">
+      <div class="footer_top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-9 col-md-9">
+              <a><img src="../images/logo_footer.svg" alt="Logo Simple"/></a>
+            </div>
+            <div class="col-lg-3 col-md-3">
+              <ul class="list-social d-flex flex-row justify-content-end">
+                <li class="social-item mx-2"><a href="#"><img src="../images/facebook_link.png"></a></li>
+                <li class="social-item mx-2"><a href="#"><img src="../images/twitter_link.png"></a></li>
+                <li class="social-item mx-2"><a href="#"><img src="../images/inst_link.png"></a></li>
+                <li class="social-item mx-2"><a href="#"><img src="../images/youTube_link.png"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>
+</body>
+</html>
