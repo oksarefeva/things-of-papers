@@ -1,13 +1,15 @@
 i18next
     .use(i18nextHttpBackend)
     .init({
-        lng: 'cs',
+        lng: 'en',
+        fallbackLng: 'cs',
         backend: {
             loadPath: '/locales/{{lng}}/translation.json'
         }
     })
     .then(() => {
         updateContent();
+        console.log('lang:', lng);
     });
 
 function updateContent() {
